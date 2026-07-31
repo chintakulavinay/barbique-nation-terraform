@@ -42,7 +42,15 @@ pipeline {
                     [$class: 'AmazonWebServicesCredentialsBinding',
                     credentialsId: 'aws-terraform']
                 ]) {
-                    bat 'terraform init'
+
+                    bat """
+                    terraform init ^
+                    -backend-config="bucket=test-terraform-bucket89782683" ^
+                    -backend-config="key=%TF_ENV%/terraform.tfstate" ^
+                    -backend-config="region=us-east-1" ^
+                    -backend-config="dynamodb_table=terraform-lock" ^
+                    -reconfigure
+                    """
                 }
             }
         }
