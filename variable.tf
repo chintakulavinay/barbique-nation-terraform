@@ -1,17 +1,17 @@
 variable "ami" {
-    description = "ec2_ami"
-    type = string
+  description = "ec2_ami"
+  type        = string
 }
 
 variable "Name" {
-    description = "name of ec2"
-    type = string
-  
+  description = "name of ec2"
+  type        = string
+
 }
 
 variable "instance_type" {
-    description = "instance type"
-    type = string
-  
+  description = "instance type"
+  type        = string
+
 }
 

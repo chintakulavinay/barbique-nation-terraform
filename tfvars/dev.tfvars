@@ -1,3 +1,3 @@
-ami = "ami-02b64aa047cb5edf5"
+ami           = "ami-02b64aa047cb5edf5"
 instance_type = "t3.micro"
-Name = "dev-server"
+Name          = "dev-server"
