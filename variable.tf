@@ -3,7 +3,7 @@ variable "ami" {
     type = string
 }
 
-variable "name" {
+variable "Name" {
     description = "name of ec2"
     type = string
   
@@ -14,3 +14,4 @@ variable "instance_type" {
     type = string
   
 }
+
